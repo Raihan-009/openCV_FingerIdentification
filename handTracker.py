@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 
 
-class handDetector():
+class handTracker():
     def __init__(self, 
                 mode=False, 
                 maxHands = 2, 
@@ -71,7 +71,7 @@ class handDetector():
         return allHands
 def main():
     cap = cv2.VideoCapture(0)
-    tracker = handDetector()
+    tracker = handTracker()
     while True:
         ret, frame = cap.read()
         if ret:

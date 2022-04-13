@@ -1,4 +1,5 @@
-
+import cv2
+import handTracker as ht
 
 cam = cv2.VideoCapture(0)
 tracker = ht.handDetector()

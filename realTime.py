@@ -3,10 +3,12 @@ import handTracker as ht
 import fingersOrientation as fo
 import fingerIdentification as fi
 
-cam = cv2.VideoCapture(0)
+
 handTracker = ht.handTracker()
 fingerTracker = fo.FingerOrientation()
 fingerIdentify = fi.FingerIdentification()
+
+cam = cv2.VideoCapture(0)
 while True:
     ret, frame = cam.read()
     if ret:
@@ -24,3 +26,5 @@ while True:
         break
 cam.release()
 cv2.destroyAllWindows()
+
+

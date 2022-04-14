@@ -8,19 +8,31 @@ class FingerIdentification():
 
     def fingerIdentification(self,orientation):
         if ((orientation.count(1)) == 5):
-            print("All Fingers are Tapped")
-        elif (orientation[0] == 1):
+            print("All Fingers are showing")
+        elif((orientation.count(0)) == 5):
+            print("All Finger Tapped")
+        # elif (orientation[0] == 1):
+        #     print("Thumb Finger")
+        elif (orientation[0] == 0):
             print("Thumb Finger Tapped")
-        elif (orientation[1] == 1):
+        # elif (orientation[1] == 1):
+        #     print("Index Finger")
+        elif (orientation[1] == 0):
             print("Index Finger Tapped")
-        elif (orientation[2] == 1):
-            print('Middle Finger tapped')
-        elif (orientation[3] == 1):
+        # elif (orientation[2] == 1):
+        #     print('Middle Finger')
+        elif (orientation[2] == 0):
+            print("Middle Finger Tapped")
+        # elif (orientation[3] == 1):
+        #     print("Ring Finger")
+        elif (orientation[3] == 0):
             print("Ring Finger Tapped")
-        elif (orientation[4] == 1):
+        # elif (orientation[4] == 1):
+        #     print("Little Finger")
+        elif (orientation[4] == 0):
             print("Little Finger Tapped")
         else:
-            print("No Finger Tapped")
+            print("Show Your Hand")
 
 def main():
 

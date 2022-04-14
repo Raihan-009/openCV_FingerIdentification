@@ -11,33 +11,34 @@ class FingerIdentification():
             print("All Fingers are showing")
         elif((orientation.count(0)) == 5):
             print("All Finger Tapped")
-        # elif (orientation[0] == 1):
-        #     print("Thumb Finger")
-        elif (orientation[0] == 0):
+
+        elif ((orientation[0] == 0) & (orientation[1] == 1) & (orientation[2] == 1) & (orientation[3] == 1) & (orientation[4] == 1)):
             print("Thumb Finger Tapped")
-        # elif (orientation[1] == 1):
-        #     print("Index Finger")
-        elif (orientation[1] == 0):
+        elif ((orientation[0] == 1) & (orientation[1] == 0) & (orientation[2] == 0) & (orientation[3] == 0) & (orientation[4] == 0)):
+            print("Thumb Finger")
+        elif ((orientation[0] == 1) & (orientation[1] == 0) & (orientation[2] == 1) & (orientation[3] == 1) & (orientation[4] == 1)):
             print("Index Finger Tapped")
-        # elif (orientation[2] == 1):
-        #     print('Middle Finger')
-        elif (orientation[2] == 0):
+        elif ((orientation[0] == 0) & (orientation[1] == 1) & (orientation[2] == 0) & (orientation[3] == 0) & (orientation[4] == 0)):
+            print("Index Finger")
+        elif ((orientation[0] == 1) & (orientation[1] == 1) & (orientation[2] == 0) & (orientation[3] == 1) & (orientation[4] == 1)):
             print("Middle Finger Tapped")
-        # elif (orientation[3] == 1):
-        #     print("Ring Finger")
-        elif (orientation[3] == 0):
+        elif ((orientation[0] == 0) & (orientation[1] == 0) & (orientation[2] == 1) & (orientation[3] == 0) & (orientation[4] == 0)):
+            print("Middle Finger")
+        elif ((orientation[0] == 1) & (orientation[1] == 1) & (orientation[2] == 1) & (orientation[3] == 0) & (orientation[4] == 1)):
             print("Ring Finger Tapped")
-        # elif (orientation[4] == 1):
-        #     print("Little Finger")
-        elif (orientation[4] == 0):
+        elif ((orientation[0] == 0) & (orientation[1] == 0) & (orientation[2] == 0) & (orientation[3] == 1) & (orientation[4] == 0)):
+            print("Ring Finger")
+        elif ((orientation[0] == 1) & (orientation[1] == 1) & (orientation[2] == 1) & (orientation[3] == 1) & (orientation[4] == 0)):
             print("Little Finger Tapped")
-        else:
-            print("Show Your Hand")
+        elif ((orientation[0] == 0) & (orientation[1] == 0) & (orientation[2] == 0) & (orientation[3] == 0) & (orientation[4] == 1)):
+            print("Little Finger")
+        
+    
 
 def main():
 
     cam = cv2.VideoCapture(0)
-    handTracker = ht.handDetector()
+    handTracker = ht.handTracker()
     fingerTracker = fo.FingerOrientation()
     fingerIdentify = FingerIdentification()
     while True:
@@ -47,6 +48,7 @@ def main():
             if hands:
                 oneHand = hands[0]
                 finger_1 = fingerTracker.fingerOrientation(oneHand)
+                print(finger_1)
                 fingerIdentify.fingerIdentification(finger_1)
 
             cv2.imshow("Framing", frame)

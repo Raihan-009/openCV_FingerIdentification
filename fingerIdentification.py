@@ -8,30 +8,54 @@ class FingerIdentification():
 
     def fingerIdentification(self,orientation):
         if ((orientation.count(1)) == 5):
-            print("All Fingers are showing")
+            #print("All Fingers are showing")
+            context = "All Fingers are showing"
+            return context
         elif((orientation.count(0)) == 5):
-            print("All Finger Tapped")
+            #print("All Finger Tapped")
+            context = "All Finger Tapped"
+            return context
 
         elif ((orientation[0] == 0) & (orientation[1] == 1) & (orientation[2] == 1) & (orientation[3] == 1) & (orientation[4] == 1)):
-            print("Thumb Finger Tapped")
+            #print("Thumb Finger Tapped")
+            context = "Thumb Finger Tapped"
+            return context
         elif ((orientation[0] == 1) & (orientation[1] == 0) & (orientation[2] == 0) & (orientation[3] == 0) & (orientation[4] == 0)):
-            print("Thumb Finger")
+            #print("Thumb Finger")
+            context = "Thumb Finger"
+            return context
         elif ((orientation[0] == 1) & (orientation[1] == 0) & (orientation[2] == 1) & (orientation[3] == 1) & (orientation[4] == 1)):
-            print("Index Finger Tapped")
+            #print("Index Finger Tapped")
+            context = "Index Finger Tapped"
+            return context
         elif ((orientation[0] == 0) & (orientation[1] == 1) & (orientation[2] == 0) & (orientation[3] == 0) & (orientation[4] == 0)):
-            print("Index Finger")
+            #print("Index Finger")
+            context = "Index Finger"
+            return context
         elif ((orientation[0] == 1) & (orientation[1] == 1) & (orientation[2] == 0) & (orientation[3] == 1) & (orientation[4] == 1)):
-            print("Middle Finger Tapped")
+            #print("Middle Finger Tapped")
+            context = "Middle Finger Tapped"
+            return context
         elif ((orientation[0] == 0) & (orientation[1] == 0) & (orientation[2] == 1) & (orientation[3] == 0) & (orientation[4] == 0)):
-            print("Middle Finger")
+            #print("Middle Finger")
+            context = "Middle Finger"
+            return context
         elif ((orientation[0] == 1) & (orientation[1] == 1) & (orientation[2] == 1) & (orientation[3] == 0) & (orientation[4] == 1)):
-            print("Ring Finger Tapped")
+            #print("Ring Finger Tapped")
+            context = "Ring Finger Tapped"
+            return context
         elif ((orientation[0] == 0) & (orientation[1] == 0) & (orientation[2] == 0) & (orientation[3] == 1) & (orientation[4] == 0)):
-            print("Ring Finger")
+            #print("Ring Finger")
+            context = "Ring Finger"
+            return context
         elif ((orientation[0] == 1) & (orientation[1] == 1) & (orientation[2] == 1) & (orientation[3] == 1) & (orientation[4] == 0)):
-            print("Little Finger Tapped")
+            #print("Little Finger Tapped")
+            context = "Little Finger Tapped"
+            return context
         elif ((orientation[0] == 0) & (orientation[1] == 0) & (orientation[2] == 0) & (orientation[3] == 0) & (orientation[4] == 1)):
-            print("Little Finger")
+            #print("Little Finger")
+            context = "Little Finger"
+            return context
         
     
 
